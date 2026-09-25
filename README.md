@@ -1,2 +1,0 @@
-# pabw-praktikum
-Latihan PABW
