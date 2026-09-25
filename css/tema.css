@@ -11,6 +11,8 @@
     --color-text-muted: #80a9e1;
     --color-primary: #6fa4e6;
     --color-border: #334155;
+    --color-danger: #f87171;
+    --color-focus: #6fa4e6;
   }
 
   /* Penyesuaian khusus elemen di mode gelap */
