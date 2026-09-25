@@ -1,0 +1,33 @@
+:root {
+  /* Token Primitif */
+  --primitif-blue: #2563eb;
+  --primitif-blue-dark: #1d4ed8;
+  --primitif-white: #ffffff;
+  --primitif-gray-light: #f8fafc;
+  --primitif-gray-border: #e2e8f0;
+  --primitif-gray-text: #1e293b;
+  --primitif-black: #0f172a;
+
+  /* Font & Spacing (rem) */
+  --font-utama: system-ui, -apple-system, sans-serif;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.75rem;
+  --font-size-xxl: 2.25rem;
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+
+  --radius-md: 0.5rem;
+
+  /* Token Semantik (Memaksa warna latar terang) */
+  --color-bg-page: #ffffff;
+  --color-bg-card: #f8fafc;
+  --color-text-main: #0f172a;
+  --color-text-muted: #334155;
+  --color-primary: #2563eb;
+  --color-border: #cbd5e1;
+}

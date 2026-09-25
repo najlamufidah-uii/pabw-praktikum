@@ -1,0 +1,30 @@
+/* ============================================
+   TEMA GELAP / DARK MODE (tema.css)
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Override Token Semantik untuk Dark Mode */
+    --color-bg-page: #0f172a;
+    --color-bg-card: #1e293b;
+    --color-text-main: #f8fafc;
+    --color-text-muted: #80a9e1;
+    --color-primary: #6fa4e6;
+    --color-border: #334155;
+    --color-danger: #f87171;
+    --color-focus: #6fa4e6;
+  }
+
+  /* Penyesuaian khusus elemen di mode gelap */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    background-color: #1e293b;
+    color: #f8fafc;
+    border-color: var(--color-border);
+  }
+
+  table {
+    border-color: var(--color-border);
+  }
+}
