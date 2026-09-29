@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!--
+  KERANGKA PROFIL — PABW 2026/2027 — Pertemuan 4
+-->
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Profil Najla Mufidah — PABW 2026/2027</title>
+  <meta name="description" content="Halaman profil mahasiswa PABW: tentang saya, karya, dan kontak.">
+
+  <!-- LEMBAR D -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/komponen.css">
+  <link rel="stylesheet" href="css/tema.css">
+</head>
+
+<body>
+  <a class="lewati" href="#utama">Lewati ke konten utama</a>
+
+  <header class="kepala">
+    <h1>Najla Mufidah</h1>
+
+    <p class="tagline">
+      Mahasiswa Informatika yang sedang belajar membangun web.
+    </p>
+
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#karya">Karya</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="utama">
+
+    <section id="tentang">
+      <h2>Tentang saya</h2>
+
+      <figure class="foto">
+        <img src="media/profil.jpg"
+             alt="Foto Profil Najla Mufidah."
+             width="480" height="480" loading="lazy">
+        <figcaption>Foto profil saya. Najla Mufidah</figcaption>
+      </figure>
+
+      <p>
+        Saya mahasiswa Program Studi Informatika Universitas Islam Indonesia.
+        Saya tertarik pada pengembangan web, khususnya bagian tampilan,
+        karena di sana keputusan teknis langsung terlihat hasilnya.
+      </p>
+
+      <table>
+        <caption>Kegiatan yang saya ikuti semester ini</caption>
+        <thead>
+          <tr>
+            <th scope="col">Kegiatan</th>
+            <th scope="col">Peran</th>
+            <th scope="col">Waktu</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th scope="row">Praktikum PABW</th>
+            <td>Peserta</td>
+            <td><time datetime="2026-09">September 2026</time></td>
+          </tr>
+
+          <tr>
+            <th scope="row">Kelas Terbuka Kampus</th>
+            <td>Peserta</td>
+            <td><time datetime="2026-10">September 2026</time></td>
+          </tr>
+
+          <tr>
+            <th scope="row">Organisasi kemahasiswaan</th>
+            <td>Anggota</td>
+            <td><time datetime="2026">2026</time></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+
+    <section id="karya">
+      <h2>Karya saya</h2>
+
+      <ul>
+        <li>
+          Halaman Kelas Terbuka Kampus — praktikum P03,
+          HTML semantik dan form.
+        </li>
+        <li>
+          Halaman Profil Pribadi — proyek latihan HTML dan CSS tahun 2026.
+        </li>
+        <li>
+          Aplikasi sistem pembayaran dan pemesanan makanan di kampus-tugas FPA 2026
+        </li>
+      </ul>
+    </section>
+
+
+    <section id="kontak">
+      <h2>Hubungi saya</h2>
+
+      <p>
+        Isi formulir berikut. Semua kolom bertanda wajib harus diisi.
+      </p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Data pengirim</legend>
+
+          <p>
+            <label for="nama">Nama lengkap</label>
+            <input id="nama" name="nama" type="text"
+                   autocomplete="name" required>
+          </p>
+
+          <p>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email"
+                   autocomplete="email" required>
+          </p>
+
+          <p>
+            <label for="nim">NIM</label>
+            <input id="nim" name="nim" type="text"
+                   inputmode="numeric"
+                   pattern="[0-9]{8}"
+                   aria-describedby="nim-bantuan"
+                   required>
+            <span id="nim-bantuan">
+              Delapan digit angka, contoh 105230102.
+            </span>
+          </p>
+
+          <p>
+            <label for="pesan">Pesan</label>
+            <textarea id="pesan" name="pesan" rows="4" required></textarea>
+          </p>
+
+          <button type="submit">Kirim</button>
+        </fieldset>
+      </form>
+    </section>
+
+
+    <!-- BAGIAN TAMBAHAN 1 -->
+    <article id="pengalaman">
+      <h2>Pengalaman belajar</h2>
+
+      <p>
+        Selama belajar Informatika, saya mulai mempelajari dasar HTML,
+        CSS, Git, GitHub, serta jaringan komputer.
+      </p>
+
+      <p>
+        Saya sedang berusaha memahami cara membuat halaman web yang
+        terstruktur, mudah digunakan, dan memiliki aksesibilitas yang baik.
+      </p>
+    </article>
+
+
+   
+
+    <!-- BAGIAN TAMBAHAN 3 -->
+    <details id="target">
+      <summary>Target belajar saya</summary>
+
+      <p>
+        Saya ingin lebih memahami HTML dan CSS, meningkatkan kemampuan
+        membuat website yang responsif dan mudah diakses, serta memahami
+        dasar pengembangan web dengan lebih baik.
+      </p>
+    </details>
+
+  </main>
+  <!-- STRUKTUR TAMBAHAN (Lembar B.3) -->
+
+    <!-- Bagian 1: Tanya Jawab -->
+    <section id="faq">
+      <h2>Tanya jawab</h2>
+      <details>
+        <summary>Apa fokus keahlian yang sedang saya pelajari?</summary>
+        <p>Saya berfokus pada pengembangan web front-end, khususnya HTML semantik, CSS modern, dan aksesibilitas web.</p>
+      </details>
+      <details>
+        <summary>Alat apa yang saya gunakan sehari-hari?</summary>
+        <p>Saya menggunakan VS Code, Git/GitHub, Figma untuk desain antarmuka, dan peramban web.</p>
+      </details>
+    </section>
+
+    <!-- Bagian 2: Keterampilan Utama -->
+    <section id="keterampilan">
+      <h2>Keterampilan utama</h2>
+      <dl>
+        <dt>HTML5 Semantik</dt>
+        <dd>Penerapan landmark semantik, struktur dokumen bersih, heading berurutan, dan pengujian validator W3C.</dd>
+        
+        <dt>CSS Fundamental &amp; Design Token</dt>
+        <dd>Pengelolaan sistem warna dua lapis, flexbox layout, responsivitas fluid, dan tema gelap tanpa JavaScript.</dd>
+        
+        <dt>Pengontrol Versi (Git)</dt>
+        <dd>Penggunaan alur kerja Git dasar seperti commit, push ke GitHub, serta manajemen repositori proyek.</dd>
+      </dl>
+    </section>
+
+    <!-- Bagian 3: Lini Masa Perjalanan -->
+    <section id="linimasa">
+      <h2>Lini masa perjalanan</h2>
+      <ol class="timeline">
+        <li><strong>Agustus 2025</strong> — Memulai studi di Program Studi Informatika Universitas Islam Indonesia.</li>
+        <li><strong>Februari 2025</strong> — Mempelajari dasar-dasar algoritma, pemrograman, dan desain antarmuka.</li>
+        <li><strong>September 2026</strong> — Mengembangkan halaman profil portofolio interaktif berbasis design token.</li>
+      </ol>
+    </section>
+
+  </main>
+
+
+  <footer class="kaki">
+    <p>
+      Najla Mufidah · 25523235 ·
+      <time datetime="2026">2026</time>
+    </p>
+  </footer>
+</body>
+</html>
