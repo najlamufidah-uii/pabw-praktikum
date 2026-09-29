@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!--
+  KERANGKA PROFIL — PABW 2026/2027 — Pertemuan 4
+  ==================================================================
+  Berkas ini SUDAH LENGKAP dan sudah lolos W3C Nu Html Checker serta
+  Lighthouse Accessibility. JANGAN mengubah struktur, landmark, label,
+  atau alt untuk memperbaiki tampilan — tampilan diubah dari berkas CSS.
+
+  Tugas Anda di Pertemuan 4:
+    1. Ganti isi yang ditandai  [ISI]  dengan milik Anda sendiri.
+    2. Buat lima berkas CSS di folder css/ lalu buka komentar
+       lima baris <link> di bawah  (lihat Lembar D).
+    3. WAJIB — tambahkan MINIMAL TIGA bagian baru di dalam <main>,
+       masing-masing memakai elemen semantik yang belum terpakai dan
+       berbeda satu sama lain  (lihat Lembar B.3). Setiap bagian wajib
+       diberi gaya memakai token yang sama, lalu dievaluasi W3C dan WCAG.
+-->
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <!-- ISI 1 — judul tab dan hasil pencarian -->
+  <title>Profil Najla Mufidah — PABW 2026/2027</title>
+  <meta name="description" content="Halaman profil mahasiswa PABW: tentang saya, karya, dan kontak.">
+
+  <!-- LEMBAR D — lima berkas CSS terhubung -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/komponen.css">
+  <link rel="stylesheet" href="css/tema.css">
+</head>
+<body>
+  <a class="lewati" href="#utama">Lewati ke konten utama</a>
+
+  <header class="kepala">
+    <!-- ISI 2 — nama Anda -->
+    <h1>Najla Mufidah</h1>
+    <!-- ISI 3 — tagline -->
+    <p class="tagline">Mahasiswa Informatika yang sedang belajar membangun web.</p>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#karya">Karya</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#keterampilan">Keterampilan</a></li>
+        <li><a href="#linimasa">Lini Masa</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="utama">
+
+    <section id="tentang">
+      <h2>Tentang saya</h2>
+
+      <figure class="foto">
+        <!-- ISI 4 — foto profil -->
+        <img src="media/profil.jpg"
+             alt="Foto Profil Najla Mufidah."
+             width="480" height="480" loading="lazy">
+        <figcaption>Foto profil — Najla Mufidah.</figcaption>
+      </figure>
+
+      <!-- ISI 5 — biografi singkat -->
+      <p>Saya mahasiswa Program Studi Informatika Universitas Islam Indonesia.
+         Saya tertarik pada pengembangan web, khususnya bagian tampilan,
+         karena di sana keputusan teknis langsung terlihat hasilnya.</p>
+
+      <table>
+        <!-- ISI 6 — tabel kegiatan -->
+        <caption>Kegiatan yang saya ikuti semester ini</caption>
+        <thead>
+          <tr>
+            <th scope="col">Kegiatan</th>
+            <th scope="col">Peran</th>
+            <th scope="col">Waktu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Praktikum PABW</th>
+            <td>Peserta</td>
+            <td><time datetime="2026-09">September 2026</time></td>
+          </tr>
+          <tr>
+            <th scope="row">Kelas Terbuka Kampus</th>
+            <td>Peserta</td>
+            <td><time datetime="2026-10">Oktober 2026</time></td>
+          </tr>
+          <tr>
+            <th scope="row">Organisasi kemahasiswaan</th>
+            <td>Anggota</td>
+            <td><time datetime="2026">2026</time></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="karya">
+      <h2>Karya saya</h2>
+      <!-- ISI 7 — tiga karya -->
+      <ul>
+        <li>Halaman Kelas Terbuka Kampus — praktikum P03, HTML semantik dan form (2026).</li>
+        <li>Desain Antarmuka Aplikasi Mobile — tugas mata kuliah UI/UX (2026).</li>
+        <li>Portofolio Web Pribadi — latihan implementasi CSS Design Token (2026).</li>
+      </ul>
+    </section>
+
+    <section id="kontak">
+      <h2>Hubungi saya</h2>
+      <p>Isi formulir berikut. Semua kolom bertanda wajib harus diisi.</p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Data pengirim</legend>
+
+          <p>
+            <label for="nama">Nama</label>
+            <input id="nama" name="nama" type="text"
+                   autocomplete="name" required>
+          </p>
+
+          <p>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email"
+                   autocomplete="email" required>
+          </p>
+
+          <p>
+            <label for="nim">NIM</label>
+            <!-- ISI 8 — pola NIM 8 digit -->
+            <input id="nim" name="nim" type="text" inputmode="numeric"
+                   pattern="[0-9]{8}" aria-describedby="nim-bantuan" required>
+            <span id="nim-bantuan">Delapan digit angka, contoh 25523235.</span>
+          </p>
+
+          <p>
+            <label for="pesan">Pesan</label>
+            <textarea id="pesan" name="pesan" rows="4" required></textarea>
+          </p>
+
+          <button type="submit">Kirim</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- STRUKTUR TAMBAHAN (Lembar B.3) — TIGA BAGIAN BARU DI DALAM MAIN     -->
+    <!-- =================================================================== -->
+
+    <!-- Bagian Baru 1: Tanya Jawab (<details> & <summary>) -->
+    <section id="faq">
+      <h2>Tanya jawab</h2>
+      <details>
+        <summary>Apa fokus keahlian yang sedang saya pelajari?</summary>
+        <p>Saya berfokus pada pengembangan web front-end, khususnya HTML semantik, CSS modern, dan aksesibilitas web.</p>
+      </details>
+      <details>
+        <summary>Alat apa yang saya gunakan sehari-hari?</summary>
+        <p>Saya menggunakan VS Code, Git/GitHub, Figma untuk desain antarmuka, dan peramban web.</p>
+      </details>
+    </section>
+
+    <!-- Bagian Baru 2: Keterampilan Utama (<dl>, <dt>, <dd>) -->
+    <section id="keterampilan">
+      <h2>Keterampilan utama</h2>
+      <dl>
+        <dt>HTML5 Semantik</dt>
+        <dd>Penerapan landmark semantik, struktur dokumen bersih, heading berurutan, dan pengujian validator W3C.</dd>
+        
+        <dt>CSS Fundamental &amp; Design Token</dt>
+        <dd>Pengelolaan sistem warna dua lapis, flexbox layout, responsivitas fluid, dan tema gelap tanpa JavaScript.</dd>
+        
+        <dt>Pengontrol Versi (Git)</dt>
+        <dd>Penggunaan alur kerja Git dasar seperti commit, push ke GitHub, serta manajemen repositori proyek.</dd>
+      </dl>
+    </section>
+
+    <!-- Bagian Baru 3: Lini Masa Perjalanan (<ol>) -->
+    <section id="linimasa">
+      <h2>Lini masa perjalanan</h2>
+      <ol class="timeline">
+        <li><strong>Agustus 2024</strong> — Memulai studi di Program Studi Informatika Universitas Islam Indonesia.</li>
+        <li><strong>Februari 2025</strong> — Mempelajari dasar-dasar algoritma, pemrograman, dan desain antarmuka.</li>
+        <li><strong>September 2026</strong> — Mengembangkan halaman profil portofolio interaktif berbasis design token.</li>
+      </ol>
+    </section>
+
+  </main>
+
+  <footer class="kaki">
+    <!-- ISI 9 — nama, NIM, tahun -->
+    <p>Najla Mufidah · 25523235 · <time datetime="2026">2026</time></p>
+  </footer>
+</body>
+</html>

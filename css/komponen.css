@@ -1,0 +1,77 @@
+/* ============================================
+   GAYA KOMPONEN & FORMULIR (komponen.css)
+   ============================================ */
+
+/* Fieldset & Form Container */
+fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md, 0.5rem);
+  padding: var(--space-md);
+  background-color: var(--color-bg-card);
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 var(--space-xs);
+  color: var(--color-primary);
+}
+
+/* Label & Input Form */
+form p {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+label {
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: var(--space-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md, 0.5rem);
+  font-family: inherit;
+  font-size: var(--font-size-md);
+  background-color: var(--color-bg-page);
+  color: var(--color-text-main);
+}
+
+/* Teks Bantuan Input */
+#nim-bantuan {
+  font-size: var(--font-size-sm, 0.875rem);
+  color: var(--color-text-muted);
+}
+
+/* Status Fokus Keyboard (WCAG Accessibility) */
+input:focus,
+textarea:focus,
+button:focus,
+a:focus {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Status Input Tidak Sah (Isian Salah) */
+input:invalid:not(:placeholder-shown) {
+  border-color: #dc2626;
+}
+
+/* Tombol Kirim */
+button[type="submit"] {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  padding: var(--space-sm) var(--space-lg);
+  font-size: var(--font-size-md);
+  font-weight: bold;
+  border-radius: var(--radius-md, 0.5rem);
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.9;
+}
