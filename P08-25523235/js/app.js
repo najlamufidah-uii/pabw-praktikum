@@ -97,3 +97,15 @@ console.log(pesan);
 
 const angka = 10;
 // angka.toUpperCase();
+
+function perkenalan(nama, peran) {
+  return `Halo, saya ${nama}. Saya ${peran}.`;
+}
+
+console.log(perkenalan(nama, "Mahasiswa Informatika"));
+
+    function formatKeahlian(keahlian) {
+  return keahlian.join(", ");
+}
+
+console.log(formatKeahlian(daftarKeahlian));
