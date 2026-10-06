@@ -47,6 +47,7 @@ const daftarKeahlian = [
 console.log(formatKeahlian(daftarKeahlian));
 
    const karya = [
+    
   {
     judul: "Halaman Kelas Terbuka Kampus",
     tahun: 2026,
@@ -71,8 +72,6 @@ const judulKarya = karya.map(item => item.judul);
 
 console.log(judulKarya);
 
-
-console.log(judulKarya);
 
 const karyaCSS = karya.filter(item => item.kategori === "CSS");
 
@@ -103,9 +102,5 @@ function perkenalan(nama, peran) {
 }
 
 console.log(perkenalan(nama, "Mahasiswa Informatika"));
-
-    function formatKeahlian(keahlian) {
-  return keahlian.join(", ");
-}
 
 console.log(formatKeahlian(daftarKeahlian));
