@@ -4,6 +4,12 @@ const nama = "Najla Mufidah";
 const nim = "25523235";
 const tahun = 2026;
 
+let pilihanAktif = "semua";
+
+console.log(typeof nama);
+console.log(typeof tahun);
+console.log(typeof belumDibuat);
+
 const identitas = `${nama} · ${nim} · ${tahun}`;
 
 console.log(identitas);
