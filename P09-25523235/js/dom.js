@@ -3,6 +3,7 @@
 console.log("DOM BERHASIL TERHUBUNG")
 
 const daftarKarya = document.querySelector("#karya ul");
+  const pesanKosong = document.querySelector("#pesan-kosong");
 const formKontak = document.querySelector("#kontak form");
 const inputNama = document.querySelector("#nama");
 const inputEmail = document.querySelector("#email");
@@ -19,13 +20,24 @@ console.log(inputPesan);
 
 
 
-karya.map(item => {
+function buatKartu(proyek) {
   const li = document.createElement("li");
 
-  li.textContent = `${item.judul} — ${item.kategori} (${item.tahun})`;
+  li.className = "kartu";
+  li.textContent = proyek.judul;
 
-  daftarKarya.append(li);
-});
+  return li;
+}
+
+function render(data) {
+  daftarKarya.textContent = "";
+
+  data.forEach((proyek) => {
+    daftarKarya.append(buatKartu(proyek));
+  });
+}
+
+render(karya);
 
 const filterKategori = document.querySelector("#filter");
 
@@ -42,6 +54,7 @@ filterKategori.addEventListener("click", event => {
       : karya.filter(item => item.kategori === kategori);
 
   daftarKarya.textContent = "";
+  pesanKosong.hidden = true;
 
   hasilFilter.map(item => {
     const li = document.createElement("li");
