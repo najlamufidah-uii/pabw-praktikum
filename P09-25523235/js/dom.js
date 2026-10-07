@@ -39,30 +39,28 @@ function render(data) {
 
 render(karya);
 
-const filterKategori = document.querySelector("#filter");
-
-filterKategori.addEventListener("click", event => {
-  if (event.target.tagName !== "BUTTON") {
-    return;
-  }
-
-  const kategori = event.target.dataset.kategori;
-
-  const hasilFilter =
-    kategori === "semua"
-      ? karya
-      : karya.filter(item => item.kategori === kategori);
-
-  daftarKarya.textContent = "";
-  pesanKosong.hidden = true;
-
-  hasilFilter.map(item => {
-    const li = document.createElement("li");
-
-    li.textContent = `${item.judul} — ${item.kategori} (${item.tahun})`;
-
-    daftarKarya.append(li);
+function tandaiTombolAktif(tombolAktif) {
+  document.querySelectorAll("#filter button").forEach((tombol) => {
+    tombol.classList.toggle("aktif", tombol === tombolAktif);
   });
+}
+
+const barisFilter = document.querySelector("#filter");
+
+barisFilter.addEventListener("click", (event) => {
+  const tombol = event.target.closest("button");
+
+  if (!tombol) return;
+  
+tandaiTombolAktif(tombol);
+
+  const kategori = tombol.dataset.kategori;
+
+  const terpilih = karya.filter(
+    (proyek) => kategori === "semua" || proyek.kategori === kategori
+  );
+
+  render(terpilih);
 });
 
 formKontak.addEventListener("submit", event => {
