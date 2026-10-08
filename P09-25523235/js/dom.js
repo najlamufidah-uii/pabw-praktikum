@@ -29,10 +29,17 @@ function buatKartu(proyek) {
   return li;
 }
 
-function render(data) {
+function render(daftar) {
   daftarKarya.textContent = "";
 
-  data.forEach((proyek) => {
+  if (daftar.length === 0) {
+    pesanKosong.hidden = false;
+    return;
+  }
+
+  pesanKosong.hidden = true;
+
+  daftar.forEach((proyek) => {
     daftarKarya.append(buatKartu(proyek));
   });
 }
