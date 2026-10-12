@@ -22,6 +22,10 @@
 
 Saya belajar menggunakan JavaScript untuk mengolah data, membuat function, menggunakan array, serta membaca error menggunakan Console dan breakpoint.
 
+## Deklarasi AI
+
+Saya menggunakan AI sebagai pendamping belajar untuk membantu memahami materi JavaScript, debugging, dan langkah pengerjaan worksheet. Saya tetap memeriksa dan memahami hasil yang digunakan dalam pekerjaan saya.`
+
 ## Kesimpulan
 
 JavaScript dapat digunakan untuk membuat halaman web menjadi lebih dinamis dan interaktif.
