@@ -1,26 +1,35 @@
 
 
-import { ALAMAT } from './api.js';
+import { ALAMAT, ambilNotisia } from './api.js';
 
 console.log('Alamat API:', ALAMAT);
 
   
 
-async function muat() {
-    const respons = await fetch(ALAMAT);
 
-    console.log('status', respons.status, 'ok', respons.ok);
 
-    if (!respons.ok) {
-        throw new Error('status ' + respons.status);
+async function jalankan() {
+    const pesan = document.querySelector('#pesan-galat');
+
+    if (pesan) {
+        pesan.hidden = true;
+        pesan.textContent = '';
     }
 
-    return respons.json();
+    try {
+        const data = await ambilNotisia();
+        console.log('Data JSON:', data);
+    } catch (galat) {
+        console.error('Gagal memuat API:', galat.message);
+
+        if (pesan) {
+            pesan.textContent = 'Gagal memuat data: ' + galat.message;
+            pesan.hidden = false;
+        }
+    }
 }
 
-muat()
-    .then(data => console.log('Data JSON:', data))
-    .catch(error => console.error('Gagal memuat API:', error));
+jalankan();
 
 
 
