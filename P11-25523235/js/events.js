@@ -1,4 +1,4 @@
-
+import { aturUlang } from "./storage.js";
 import {
   barisFilter,
   tandaiTombolAktif,
@@ -15,18 +15,20 @@ import {
   ubahPilihanAktif
 } from "./state.js";
 
-barisFilter.addEventListener("click", (event) => {
-  const tombol = event.target.closest("button");
 
+barisFilter.addEventListener("click", (event) => {
+  console.log("Tombol filter diklik!");
+
+  const tombol = event.target.closest("button");
   if (!tombol) return;
 
   const kategori = tombol.dataset.kategori;
+  console.log("Kategori yang dipilih:", kategori);
 
   ubahPilihanAktif(kategori);
-tandaiTombolAktif(tombol);
-
-
+  tandaiTombolAktif(tombol);
 });
+
 
 formKontak.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -61,5 +63,26 @@ formKontak.addEventListener("submit", (event) => {
     error.classList.add("error");
     error.textContent = "Pesan wajib diisi!";
     inputPesan.after(error);
+  }
+});
+    
+const tombolReset = document.querySelector("#tombol-reset");
+
+tombolReset.addEventListener("click", () => {
+  console.log("Sebelum reset:", localStorage.getItem("pabw-p11"));
+
+  aturUlang();
+
+  console.log("Sesudah reset:", localStorage.getItem("pabw-p11"));
+
+  state.pilihanAktif = "semua";
+  render(state);
+
+  const tombolSemua = document.querySelector(
+    '[data-kategori="semua"]'
+  );
+
+  if (tombolSemua) {
+    tandaiTombolAktif(tombolSemua);
   }
 });

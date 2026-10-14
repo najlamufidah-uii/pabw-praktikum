@@ -4,12 +4,17 @@ console.log("APP.JS BERHASIL DIPANGGIL");
 
 import { render } from "./dom.js";
 import "./events.js";
-import { state, ubahDaftarProyek } from "./state.js";
 import { ambilNotisia } from "./api.js";
+import {
+  state,
+  ubahDaftarProyek,
+  pulihkanPilihan
+} from "./state.js";
 
 console.log("JavaScript berhasil terhubung!");
 
 async function mulaiAplikasi() {
+  pulihkanPilihan();
   render(state);
 
   try {
