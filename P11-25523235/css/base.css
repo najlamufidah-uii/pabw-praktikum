@@ -1,0 +1,64 @@
+/* ============================================
+   RESET DASAR & TIPOGRAFI (base.css)
+   ============================================ */
+
+/* Box Sizing agar perhitungan padding & border konsisten */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Memaksa gaya dasar halaman menggunakan token */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-utama);
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+  background-color: var(--color-bg-page);
+  color: var(--color-text-main);
+}
+
+/* Link Aksesibilitas WCAG: 'Lewati ke konten utama' */
+.lewati {
+  position: absolute;
+  top: -9999px;
+  left: var(--space-md);
+  background: var(--color-primary);
+  color: #ffffff;
+  padding: var(--space-xs) var(--space-sm);
+  z-index: 1000;
+  text-decoration: none;
+  border-radius: var(--radius-sm, 0.25rem);
+}
+
+.lewati:focus {
+  top: var(--space-sm);
+}
+
+/* Gaya Tipografi & Judul */
+h1 {
+  font-size: var(--font-size-xxl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-xs);
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: var(--space-xs);
+  margin-top: var(--space-xl);
+}
+
+p {
+  margin-bottom: var(--space-md);
+}
+
+/* Pengaturan Gambar Responsif */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
