@@ -1,7 +1,7 @@
 
 
 console.log("APP.JS BERHASIL DIPANGGIL");
-
+import { muat } from "./storage.js";
 import { render } from "./dom.js";
 import "./events.js";
 import { ambilNotisia } from "./api.js";
@@ -29,3 +29,4 @@ async function mulaiAplikasi() {
 }
 
 mulaiAplikasi();
+  console.log("Hasil muat:", muat());

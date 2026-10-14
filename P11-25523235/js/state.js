@@ -31,7 +31,7 @@ export function ambilKaryaTerpilih() {
 export function ubahDaftarProyek(dataApi) {
   state.daftarProyek = dataApi;
 }
-    export function pulihkanPilihan() {
+   export function pulihkanPilihan() {
   const tersimpan = muat();
 
   if (
@@ -40,5 +40,7 @@ export function ubahDaftarProyek(dataApi) {
     ["semua", "HTML", "UI/UX", "CSS"].includes(tersimpan.kategoriAktif)
   ) {
     state.pilihanAktif = tersimpan.kategoriAktif;
+  } else {
+    state.pilihanAktif = "semua";
   }
 }
