@@ -11,8 +11,8 @@ import {
 } from "./dom.js";
 
 import {
-  ubahPilihanAktif,
-  ambilKaryaTerpilih
+  state,
+  ubahPilihanAktif
 } from "./state.js";
 
 barisFilter.addEventListener("click", (event) => {
@@ -23,8 +23,9 @@ barisFilter.addEventListener("click", (event) => {
   const kategori = tombol.dataset.kategori;
 
   ubahPilihanAktif(kategori);
-  tandaiTombolAktif(tombol);
-  render(ambilKaryaTerpilih());
+tandaiTombolAktif(tombol);
+
+
 });
 
 formKontak.addEventListener("submit", (event) => {

@@ -18,20 +18,34 @@ export function buatKartu(proyek) {
   return li;
 }
 
-export function render(daftar) {
+
+export function saring(state) {
+  if (state.pilihanAktif === "semua") {
+    return state.daftarKarya;
+  }
+
+  return state.daftarKarya.filter(
+    (item) => item.kategori === state.pilihanAktif
+  );
+}
+
+export function render(state) {
   daftarKarya.textContent = "";
 
-  if (daftar.length === 0) {
+  const tampil = saring(state);
+
+  if (tampil.length === 0) {
     pesanKosong.hidden = false;
     return;
   }
 
   pesanKosong.hidden = true;
 
-  daftar.forEach((proyek) => {
-    daftarKarya.append(buatKartu(proyek));
+  tampil.forEach((item) => {
+    daftarKarya.append(buatKartu(item));
   });
 }
+
 
 export function tandaiTombolAktif(tombolAktif) {
   document.querySelectorAll("#filter button").forEach((tombol) => {

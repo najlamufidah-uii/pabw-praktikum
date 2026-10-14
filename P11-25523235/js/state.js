@@ -1,4 +1,5 @@
 
+import { render } from "./dom.js";
 import { karya } from "./data.js";
 
 export const state = {
@@ -7,8 +8,10 @@ export const state = {
   daftarProyek: []
 };
 
+
 export function ubahPilihanAktif(pilihan) {
   state.pilihanAktif = pilihan;
+  render(state);
 }
 
 export function ambilKaryaTerpilih() {

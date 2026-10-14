@@ -10,7 +10,7 @@ import { ambilNotisia } from "./api.js";
 console.log("JavaScript berhasil terhubung!");
 
 async function mulaiAplikasi() {
-  render(state.daftarKarya);
+  render(state);
 
   try {
     const dataApi = await ambilNotisia();
