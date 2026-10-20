@@ -126,3 +126,33 @@ td {
   outline: 2px solid currentColor;
   outline-offset: 2px;
 }
+
+
+/* Form Kontak Vue */
+.form-kontak {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.form-kontak form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-kontak .field-kontak {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-kontak .field-kontak input,
+.form-kontak .field-kontak textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-kontak button {
+  align-self: flex-start;
+}
